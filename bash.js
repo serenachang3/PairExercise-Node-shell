@@ -1,22 +1,24 @@
+const pwdFile = require('./pwd.js')
+const lsFile = require('./ls')
 
-process.stdout.write('prompt > ');
+pwdFile.pwd()
 
-process.stdin.on('data', (data) => {
-    const cmd = data.toString().trim();
+lsFile.ls();
 
-    if(cmd === "May"){
-     process.stdout.write('Hi May');
-    }
+// process.stdout.write('prompt > ');
+
+// process.stdin.on('data', (data) => {
+//     const cmd = data.toString().trim();
   
-    if(cmd === 'pwd'){
-        process.stdout.write(process.cwd());
-    }
-    process.stdout.write('\nprompt > ');
-})
+//     if(cmd === 'pwd'){
+//         process.stdout.write(process.cwd());
+//     }
+//     process.stdout.write('\nprompt > ');
+// })
 
-// console.log(process.cwd());
+// // console.log(process.cwd());
 
-// import { cwd } from 'process';
-// console.log(`Current directory: ${cwd()}`);
+// // import { cwd } from 'process';
+// // console.log(`Current directory: ${cwd()}`);
 
-// console.log("Hello World");
+// // console.log("Hello World");
